@@ -19,7 +19,7 @@ function App() {
         <h2>Where every slice becomes your best plan.</h2>
       </header>
       <main>
-        <section>
+        <section className="grid grid-cols-3 gap-4">
           <CardPizza
             name="Napolitana"
             price={5950}
