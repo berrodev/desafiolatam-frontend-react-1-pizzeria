@@ -4,7 +4,7 @@ import CardPizza from './components/CardPizza';
 function App() {
   return (
     <>
-      <nav className="bg-slate-800 text-white flex justify-between w-full px-4">
+      <nav className="bg-gray-900 text-white flex justify-between w-full px-4">
         <div className="flex gap-2">
           <a href="/">🍕Home</a>
           <a href="/profile">🔒Profile</a>
@@ -47,7 +47,7 @@ ac54-90f6c31eb3e3"
         </section>
       </main>
 
-      <footer className="bg-slate-800 text-white text-center py-4">
+      <footer className="bg-gray-900 text-white text-center py-4">
         © 2025 - Pizza & Chill - All rights reserved.
       </footer>
     </>

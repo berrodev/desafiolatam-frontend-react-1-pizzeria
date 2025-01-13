@@ -15,7 +15,7 @@ const CardPizza = ({ name, price, ingredients, img }) => {
           <button className="px-4 py-2 text-sm text-white bg-blue-500 rounded hover:bg-blue-600">
             Ver Más 👀
           </button>
-          <button className="px-4 py-2 text-sm text-white bg-green-500 rounded hover:bg-green-600">
+          <button className="px-4 py-2 text-sm text-white bg-gray-900 rounded hover:bg-gray-600">
             Añadir 🛒
           </button>
         </div>
