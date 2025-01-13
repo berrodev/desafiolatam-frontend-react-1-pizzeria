@@ -14,8 +14,8 @@ function App() {
         </div>
         <a href="/total">🛒Total: $20.000</a>
       </nav>
-      <header>
-        <h1>Pizza & Chill</h1>
+      <header className="bg-header-pizza text-white bg-black/70 bg-blend-overlay bg-cover  min-h-96 flex flex-col justify-center items-center">
+        <h1 className="text-6xl">Pizza & Chill</h1>
         <h2>Where every slice becomes your best plan.</h2>
       </header>
       <main>
