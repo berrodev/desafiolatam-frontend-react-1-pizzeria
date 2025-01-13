@@ -14,12 +14,12 @@ function App() {
         </div>
         <a href="/total">🛒Total: $20.000</a>
       </nav>
-      <header className="bg-header-pizza text-white bg-black/70 bg-blend-overlay bg-cover  min-h-96 flex flex-col justify-center items-center">
+      <header className="bg-header-pizza text-white bg-black/70 bg-blend-overlay bg-cover  min-h-96 flex flex-col justify-center items-center ">
         <h1 className="text-6xl">Pizza & Chill</h1>
         <h2>Where every slice becomes your best plan.</h2>
       </header>
       <main>
-        <section className="grid grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 gap-4 m-4 md:grid-cols-3">
           <CardPizza
             name="Napolitana"
             price={5950}
@@ -47,7 +47,9 @@ ac54-90f6c31eb3e3"
         </section>
       </main>
 
-      <footer>© 2025 - Pizza & Chill - All rights reserved.</footer>
+      <footer className="bg-slate-800 text-white text-center py-4">
+        © 2025 - Pizza & Chill - All rights reserved.
+      </footer>
     </>
   );
 }
