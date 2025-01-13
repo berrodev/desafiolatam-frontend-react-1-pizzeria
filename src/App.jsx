@@ -1,23 +1,14 @@
 import './App.css';
 import CardPizza from './components/CardPizza';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
-      <nav className="bg-gray-900 text-white flex justify-between w-full px-4">
-        <div className="flex gap-2">
-          <a href="/">🍕Home</a>
-          <a href="/profile">🔒Profile</a>
-          <a href="/logout">🔒Logout</a>
-          <a href="/login">🔐Login</a>
-          <a href="/register">🔐Register</a>
-        </div>
-        <a href="/total">🛒Total: $20.000</a>
-      </nav>
-      <header className="bg-header-pizza text-white bg-black/70 bg-blend-overlay bg-cover  min-h-96 flex flex-col justify-center items-center ">
-        <h1 className="text-6xl">Pizza & Chill</h1>
-        <h2>Where every slice becomes your best plan.</h2>
-      </header>
+      <Navbar />
+      <Header />
       <main>
         <section className="grid grid-cols-1 gap-4 m-4 md:grid-cols-3">
           <CardPizza
@@ -47,9 +38,7 @@ ac54-90f6c31eb3e3"
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white text-center py-4">
-        © 2025 - Pizza & Chill - All rights reserved.
-      </footer>
+      <Footer />
     </>
   );
 }
