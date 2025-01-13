@@ -9,7 +9,7 @@ function App() {
     <>
       <Navbar />
       <Header />
-      <main>
+      <main className="max-w-6xl mx-auto">
         <section className="grid grid-cols-1 gap-4 m-4 md:grid-cols-3">
           <CardPizza
             name="Napolitana"
