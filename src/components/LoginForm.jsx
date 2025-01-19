@@ -59,6 +59,7 @@ const LoginForm = () => {
           required
           onChange={handleChange}
           value={formData.email}
+          autoComplete="email"
         />
       </div>
       <div className="mb-5">
