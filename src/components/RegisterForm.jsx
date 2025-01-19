@@ -1,6 +1,27 @@
+import { useState } from 'react';
+
 const RegisterForm = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <form className="p-4 mx-auto border border-gray-200 rounded-lg shadow-lg dark:border-gray-700 dark:bg-gray-800 dark:text-white">
+    <form
+      className="p-4 mx-auto border border-gray-200 rounded-lg shadow-lg dark:border-gray-700 dark:bg-gray-800 dark:text-white"
+      onSubmit={handleSubmit}
+    >
       <h2 className="mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
         Register
       </h2>
@@ -12,11 +33,13 @@ const RegisterForm = () => {
           Your email
         </label>
         <input
+          name="email"
           type="email"
           id="register-email"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="name@example.com"
           required
+          onChange={handleChange}
         />
       </div>
       <div className="mb-5">
@@ -27,10 +50,12 @@ const RegisterForm = () => {
           Your password
         </label>
         <input
+          name="password"
           type="password"
           id="password"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
+          onChange={handleChange}
         />
       </div>
       <div className="mb-5">
@@ -41,10 +66,12 @@ const RegisterForm = () => {
           Confirm password
         </label>
         <input
+          name="confirmPassword"
           type="password"
           id="register-confirm-password"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
+          onChange={handleChange}
         />
       </div>
 
