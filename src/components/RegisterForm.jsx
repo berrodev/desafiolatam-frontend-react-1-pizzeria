@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const RegisterForm = () => {
+const RegisterForm = ({ mySwal }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -30,6 +30,11 @@ const RegisterForm = () => {
     }
     // If the passwords match, log the form data
     console.log(formData);
+    mySwal.fire(
+      'Registration Successful',
+      'Welcome! You have successfully registered.',
+      'success'
+    );
     setFormData({
       email: '',
       password: '',

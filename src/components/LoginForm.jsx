@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const LoginForm = () => {
+const LoginForm = ({ mySwal }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -16,6 +16,12 @@ const LoginForm = () => {
   };
 
   const handleSubmit = (e) => {
+    mySwal.fire(
+      'Login Successful',
+      'Welcome back! You have successfully logged in.',
+      'success'
+    );
+
     e.preventDefault();
 
     // Check if the password is at least 6 characters

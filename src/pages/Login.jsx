@@ -1,9 +1,9 @@
 import LoginForm from '../components/LoginForm';
 
-const Login = () => {
+const Login = ({ mySwal }) => {
   return (
     <section className="max-w-6xl p-4 mx-auto">
-      <LoginForm />
+      <LoginForm mySwal={mySwal} />
     </section>
   );
 };
