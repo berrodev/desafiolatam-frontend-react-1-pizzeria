@@ -17,11 +17,7 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Check if the passwords match
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
+
     // Check if the password is at least 6 characters
     if (formData.password.length < 6) {
       setError('Password should be at least 6 characters');
