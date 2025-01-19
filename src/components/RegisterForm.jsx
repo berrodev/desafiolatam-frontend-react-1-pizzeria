@@ -47,7 +47,7 @@ const RegisterForm = () => {
       </h2>
       <div className="mb-5">
         <label
-          htmlFor="email"
+          htmlFor="register-email"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Your email
@@ -73,7 +73,7 @@ const RegisterForm = () => {
         <input
           name="password"
           type="password"
-          id="password"
+          id="register-password"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
           onChange={handleChange}
@@ -83,7 +83,7 @@ const RegisterForm = () => {
       </div>
       <div className="mb-5">
         <label
-          htmlFor="password-confirm"
+          htmlFor="register-confirm-password"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
           Confirm password
