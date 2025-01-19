@@ -2,7 +2,9 @@ import './App.css';
 import CardPizza from './components/CardPizza';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Login from './components/Login';
 import Navbar from './components/Navbar';
+import Register from './components/Register';
 
 function App() {
   // const token = true;
@@ -11,6 +13,8 @@ function App() {
       <Navbar />
       <Header />
       <main className="max-w-6xl mx-auto">
+        <Register />
+        <Login />
         <section className="grid grid-cols-1 gap-4 m-4 md:grid-cols-3">
           <CardPizza
             name="Napolitana"
