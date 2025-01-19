@@ -15,8 +15,8 @@ function App() {
       <main className="max-w-6xl mx-auto">
         <Register />
         <Login />
+        <Home />
       </main>
-      <Home />
       <Footer />
     </>
   );
