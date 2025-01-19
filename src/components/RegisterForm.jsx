@@ -9,17 +9,26 @@ const RegisterForm = () => {
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
+    // Clear the error message when the user starts typing
     setError(null);
+    // Update the form data
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Check if the passwords match
     if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
       return;
     }
+    // Check if the password is at least 6 characters
+    if (formData.password.length < 6) {
+      setError('Password should be at least 6 characters');
+      return;
+    }
+    // If the passwords match, log the form data
     console.log(formData);
     setFormData({
       email: '',
@@ -69,6 +78,7 @@ const RegisterForm = () => {
           required
           onChange={handleChange}
           value={formData.password}
+          minLength={6}
         />
       </div>
       <div className="mb-5">
@@ -86,12 +96,14 @@ const RegisterForm = () => {
           required
           onChange={handleChange}
           value={formData.confirmPassword}
+          minLength={6}
         />
       </div>
-      {error && (
-        <div className="mt-2 text-sm text-center text-red-500">{error}</div>
-      )}
-
+      <div className="min-h-10">
+        {error && (
+          <div className="my-2 text-sm text-center text-red-500">{error}</div>
+        )}
+      </div>
       <button
         type="submit"
         className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
