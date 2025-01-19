@@ -6,14 +6,20 @@ const RegisterForm = () => {
     password: '',
     confirmPassword: '',
   });
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
+    setError(null);
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.password !== formData.confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
     console.log(formData);
     setFormData({
       email: '',
@@ -82,6 +88,9 @@ const RegisterForm = () => {
           value={formData.confirmPassword}
         />
       </div>
+      {error && (
+        <div className="mt-2 text-sm text-center text-red-500">{error}</div>
+      )}
 
       <button
         type="submit"
