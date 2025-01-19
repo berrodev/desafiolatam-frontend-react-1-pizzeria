@@ -8,6 +8,7 @@ import Register from './pages/Register';
 
 function App() {
   // const token = true;
+  // TODO: router
   return (
     <>
       <Navbar />
