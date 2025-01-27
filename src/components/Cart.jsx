@@ -1,17 +1,6 @@
 import { useState } from 'react';
 import { pizzaCart } from '../pizzas';
 
-// Importa pizzaCart del archivo pizzas.js, este array de objetos simula el carrito de
-// compras.
-// ● Recorre el array de pizzaCart (puedes basarte en las capturas de referencia
-// adjuntadas al nal de las instrucciones), lo importante es que se muestre la
-// información de cada pizza en el carrito, como imagen de la pizza, nombre, precio y
-// cantidad.
-// ● Agrega botones para aumentar y disminuir la cantidad de pizzas en el carrito. En
-// caso de que la cantidad sea 0, la pizza debe eliminarse del carrito.
-// ● Calcula el total de la compra y muéstralo en el carrito.
-// ● Agrega un botón de pagar, este por ahora no hará nada, pero en hitos futuros lo
-// utilizaremos para simular la compra.
 const Cart = () => {
   const [cart, setCart] = useState(pizzaCart);
 
