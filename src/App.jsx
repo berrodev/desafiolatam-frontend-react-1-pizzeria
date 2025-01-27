@@ -1,4 +1,5 @@
 import './App.css';
+import Cart from './components/Cart';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -20,7 +21,8 @@ function App() {
       <main className="max-w-6xl mx-auto">
         {/* <Register mySwal={mySwal} />
         <Login mySwal={mySwal} /> */}
-        <Home />
+        {/* <Home /> */}
+        <Cart />
       </main>
       <Footer />
     </>
