@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="bg-gray-900 text-white flex justify-between w-full px-4">
+    <nav className="flex justify-between w-full px-4 text-white bg-gray-900">
       <div className="flex gap-2">
         <a href="/">🍕Home</a>
         <a href="/profile">🔒Profile</a>
@@ -8,7 +8,7 @@ const Navbar = () => {
         <a href="/login">🔐Login</a>
         <a href="/register">🔐Register</a>
       </div>
-      <a href="/total">🛒Total: $20.000</a>
+      <a href="/total">🛒Total: $</a>
     </nav>
   );
 };
