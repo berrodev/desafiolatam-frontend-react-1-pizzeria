@@ -18,8 +18,8 @@ function App() {
       <Navbar />
       <Header />
       <main className="max-w-6xl mx-auto">
-        <Register mySwal={mySwal} />
-        <Login mySwal={mySwal} />
+        {/* <Register mySwal={mySwal} />
+        <Login mySwal={mySwal} /> */}
         <Home />
       </main>
       <Footer />
