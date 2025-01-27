@@ -28,19 +28,24 @@ const Cart = () => {
   };
 
   return (
-    <section className="flex flex-col max-w-6xl gap-4 p-4 m-4 mx-auto ">
+    <section className="flex flex-col max-w-6xl gap-6 p-4 m-4 mx-auto ">
       <h2 className="text-2xl font-bold text-gray-800 ">Order Details: </h2>
       {cart.map((item) => (
         <div
           key={item.id}
-          className="flex items-center self-center w-full overflow-hidden"
+          className="flex items-center justify-between w-full max-w-2xl "
         >
-          <img src={item.img} alt="Pizza Image" className="object-cover h-16" />
-          <div className="flex flex-col p-4">
+          <div className="flex items-center gap-2">
+            <img
+              src={item.img}
+              alt="Pizza Image"
+              className="object-cover h-16"
+            />
             <h2 className="mb-2 text-xl font-bold text-gray-800">
               {item.name}
             </h2>
-
+          </div>
+          <div className="flex flex-col p-4">
             <div className="flex justify-between gap-2 ">
               <p className="px-4 py-2 text-sm rounded">${item.price}</p>
               <button
@@ -61,7 +66,7 @@ const Cart = () => {
         </div>
       ))}
       <div className="flex flex-col overflow-hidden">
-        <div className="flex flex-col flex-1 p-4">
+        <div className="flex flex-col flex-1">
           <h2 className="mb-2 text-xl font-bold text-gray-800">
             Total $
             {cart.reduce((acc, item) => acc + item.price * item.count, 0)}
