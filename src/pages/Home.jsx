@@ -1,19 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import CardPizza from '../components/CardPizza';
-import { pizzas } from '../pizzas';
-
-const getPizzaData = async () => {
-  try {
-    const response = await fetch('http://localhost:5000/api/pizzas');
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-};
 
 const Home = () => {
+  const [pizzas, setPizzas] = useState([]);
+
   useEffect(() => {
+    const getPizzaData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/pizzas');
+        const data = await response.json();
+        setPizzas(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     getPizzaData();
   }, []);
 
