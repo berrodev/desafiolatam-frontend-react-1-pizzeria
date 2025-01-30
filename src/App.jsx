@@ -21,8 +21,8 @@ function App() {
       <main className="max-w-6xl mx-auto">
         {/* <Register mySwal={mySwal} />
         <Login mySwal={mySwal} /> */}
-        {/* <Home /> */}
-        <Cart />
+        <Home />
+        {/* <Cart /> */}
       </main>
       <Footer />
     </>

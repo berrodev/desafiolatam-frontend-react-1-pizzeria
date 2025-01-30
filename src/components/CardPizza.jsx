@@ -7,14 +7,14 @@ const CardPizza = ({ name, price, ingredients, img }) => {
         <h2 className="mb-2 text-xl font-bold text-gray-800">
           {nameCapitalized}
         </h2>
-        <p className="flex-1 mb-4 text-gray-600">
+        <div className="flex-1 mb-4 text-gray-600">
           <span className="font-semibold">Ingredientes:</span>{' '}
           <ul className="list-disc list-inside">
             {ingredients.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
             ))}
           </ul>
-        </p>
+        </div>
         <p className="mb-4 text-lg font-semibold text-gray-800">
           Precio: <span className="text-green-500">${price}</span>
         </p>
