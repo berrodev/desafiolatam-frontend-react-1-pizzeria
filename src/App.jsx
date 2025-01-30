@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import PizzaDetails from './pages/PizzaDetails';
 import Register from './pages/Register';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
@@ -18,10 +19,11 @@ function App() {
     <>
       <Navbar />
       <Header />
-      <main className="max-w-6xl mx-auto">
+      <main className="flex h-screen max-w-6xl mx-auto">
         {/* <Register mySwal={mySwal} />
         <Login mySwal={mySwal} /> */}
         <Home />
+        {/* <PizzaDetails /> */}
         {/* <Cart /> */}
       </main>
       <Footer />
