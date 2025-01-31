@@ -19,11 +19,11 @@ function App() {
     <>
       <Navbar />
       <Header />
-      <main className="flex h-screen max-w-6xl mx-auto">
+      <main className="flex h-full max-w-6xl mx-auto">
         {/* <Register mySwal={mySwal} />
         <Login mySwal={mySwal} /> */}
-        <Home />
-        {/* <PizzaDetails /> */}
+        {/* <Home /> */}
+        <PizzaDetails />
         {/* <Cart /> */}
       </main>
       <Footer />

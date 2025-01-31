@@ -1,11 +1,7 @@
 import Pizza from '../components/Pizza';
 
 const PizzaDetails = () => {
-  return (
-    <section>
-      <Pizza />
-    </section>
-  );
+  return <Pizza />;
 };
 
 export default PizzaDetails;

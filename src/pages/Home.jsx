@@ -3,16 +3,17 @@ import CardPizza from '../components/CardPizza';
 
 const Home = () => {
   const [pizzas, setPizzas] = useState([]);
-  const getPizzaData = async () => {
-    try {
-      const response = await fetch('http://localhost:5000/api/pizzas');
-      const data = await response.json();
-      setPizzas(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+
   useEffect(() => {
+    const getPizzaData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/pizzas');
+        const data = await response.json();
+        setPizzas(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     getPizzaData();
   }, []);
 
