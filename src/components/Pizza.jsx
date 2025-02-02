@@ -21,7 +21,7 @@ const Pizza = () => {
   }
   return (
     <div className="flex flex-col-reverse w-full gap-6 p-12 tracking-wide sm:flex-row">
-      <div className="flex flex-col w-full gap-4 sm:gap-2 sm:w-1/2 justify-evenly">
+      <div className="flex flex-col gap-4 sm:gap-2 justify-evenly ">
         <h2 className="text-4xl tracking-widest">{pizza.name}</h2>
         <ul className="flex flex-wrap justify-between bg-[#e5d7d7]">
           {pizza.ingredients.map((ingredient) => (
@@ -38,7 +38,7 @@ const Pizza = () => {
       <img
         src={pizza.img}
         alt={pizza.name}
-        className="object-fill h-auto sm:w-1/2 rounded-2xl aspect-video"
+        className="object-fill h-auto rounded-2xl aspect-video "
       />
     </div>
   );
