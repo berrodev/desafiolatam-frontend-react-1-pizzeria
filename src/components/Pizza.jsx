@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const URL_ENDPOINT = 'http://localhost:5000/api/pizzas/p003';
+const URL_ENDPOINT = 'http://localhost:5000/api/pizzas/p001';
 
 const Pizza = () => {
   const [pizza, setPizza] = useState({});
