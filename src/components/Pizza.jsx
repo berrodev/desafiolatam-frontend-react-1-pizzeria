@@ -38,7 +38,7 @@ const Pizza = () => {
       <img
         src={pizza.img}
         alt={pizza.name}
-        className="object-fill h-auto rounded-2xl aspect-video "
+        className="object-fill w-full h-auto rounded-2xl aspect-video sm:w-1/2"
       />
     </div>
   );

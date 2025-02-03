@@ -22,7 +22,7 @@ function App() {
       <main className="h-full max-w-6xl mx-auto">
         {/* <Register mySwal={mySwal} />
         <Login mySwal={mySwal} /> */}
-        <Home />
+        {/* <Home /> */}
         <PizzaDetails />
         {/* <Cart /> */}
       </main>
