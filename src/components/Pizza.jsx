@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 
-const URL_ENDPOINT = 'http://localhost:5000/api/pizzas/p001';
+// const URL_ENDPOINT = 'http://localhost:5000/api/pizzas/p001';
 
-const Pizza = () => {
+const Pizza = ({ id }) => {
+  const URL_ENDPOINT = `http://localhost:5000/api/pizzas/p00${id}`;
   const [pizza, setPizza] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {

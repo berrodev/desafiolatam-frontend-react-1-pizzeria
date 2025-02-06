@@ -9,6 +9,7 @@ import PizzaDetails from './pages/PizzaDetails';
 import Register from './pages/Register';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { BrowserRouter, Routes, Route } from 'react-router';
 
 const mySwal = withReactContent(Swal);
 
@@ -20,11 +21,15 @@ function App() {
       <Navbar />
       <Header />
       <main className="h-full max-w-6xl mx-auto">
-        {/* <Register mySwal={mySwal} />
-        <Login mySwal={mySwal} /> */}
-        {/* <Home /> */}
-        <PizzaDetails />
-        {/* <Cart /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register mySwal={mySwal} />} />
+          <Route path="/login" element={<Login mySwal={mySwal} />} />
+          <Route path="/pizzas/:id" element={<PizzaDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<div>profile</div>} />
+          <Route path="*" element={<div>Page not found</div>} />
+        </Routes>
       </main>
       <Footer />
     </>
